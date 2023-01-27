@@ -21,7 +21,7 @@
         <div id="quizarea">
             <div id="title">
                 <div class="col">
-                    <br/>
+                    <br />
                     <h1 class="text-center p-3 textStyle">What is your learning style?</h1>
                     <br />
                 </div>
@@ -30,7 +30,7 @@
 
                 <!--intro content-->
                 <div id="intro" class="justify-content-center mx-auto">
-                    <br/>
+                    <br />
                     <h2 class="text-center textStyle">Find out your learning style</h2>
                     <br /><br />
                     <p class="text-center textStyle">Answer the questions to find out your learning style.</p>
@@ -48,35 +48,58 @@
                     <!-- form for user input -->
                     <form id="quizform" class="justify-content-center">
                         <div class="form-check p-1">
-                            <input class="form-check-input position-absolute" type="radio" name="answers" id="answers1" value="option1">
-                            <label class="form-check-label textStyle justify-content-center" for="answers1" id="answer1">
+                            <input class="form-check-input position-absolute" type="radio" name="answers" id="answers1"
+                                value="option1">
+                            <label class="form-check-label textStyle justify-content-center" for="answers1"
+                                id="answer1">
                             </label>
                         </div>
                         <div class="form-check p-1">
-                            <input class="form-check-input position-absolute" type="radio" name="answers" id="answers2" value="option2">
-                            <label class="form-check-label textStyle justify-content-center" for="answers2" id="answer2">
+                            <input class="form-check-input position-absolute" type="radio" name="answers" id="answers2"
+                                value="option2">
+                            <label class="form-check-label textStyle justify-content-center" for="answers2"
+                                id="answer2">
                             </label>
                         </div>
                         <div class="form-check p-1">
-                            <input class="form-check-input position-absolute" type="radio" name="answers" id="answers3" value="option3">
-                            <label class="form-check-label textStyle justify-content-center" for="answers3" id="answer3">
+                            <input class="form-check-input position-absolute" type="radio" name="answers" id="answers3"
+                                value="option3">
+                            <label class="form-check-label textStyle justify-content-center" for="answers3"
+                                id="answer3">
                             </label>
                         </div>
                         <br />
                         <!-- button to go to next question  -->
                         <div class="justify-content-center">
-                            <input type="button" value="Next" class="btn btn-outline-light text-center textStyle boxShadow"
+                            <input type="button" value="Next"
+                                class="btn btn-outline-light text-center textStyle boxShadow"
                                 onclick="nextQuestion()" />
                         </div>
 
-                    </form>
-                    <!-- progress bar -->
-                    <br/>
-                    <div class="progress m-4 boxShadow" role="progressbar" aria-label="quiz progress"
-                        aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 0%"></div>
-                    </div>
+                        <!-- progress bar -->
+                        <div id="progressBar" class="progress m-5 boxShadow" role="progressbar"
+                            aria-label="quiz progress" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                style="width: 0%">
+                            </div>
+                        </div>
 
+                    </form>
+                </div>
+
+                <div id="results" class="justify-content-center mx-auto">
+                    <br />
+                    <h2 class="text-center textStyle">Results</h2>
+                    <br /><br />
+                    <p class="text-center textStyle">You scored mostly. Your learning style is:</p>
+
+                    <!-- progress bar -->
+                    <div id="progressBar" class="progress m-5 boxShadow" role="progressbar" aria-label="quiz progress"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                            style="width: 100%">
+                        </div>
+                    </div>
                 </div>
 
             </div>
