@@ -223,7 +223,7 @@ function showQuestion(currentQuestion) {
 
 function startQuiz() {
     // hide introduction
-    hideElement("intro")
+    hideElement("intro");
     // show questions and choices
     showElement("main");
     showQuestion(questionCounter);
@@ -232,17 +232,20 @@ function startQuiz() {
 function nextQuestion() {
     //change question and corresponding answers
     questionCounter++;
+    addProgress();
     if (questionCounter < 20) {
         showQuestion(questionCounter);
     } else {
-        hideElement("main")
+        hideElement("main");
         showElement("results");
     }
-    addProgress();
-
 }
 
 function addProgress() {
     var bar = document.querySelector(".progress-bar");
     bar.style.width = (5 * questionCounter) + "%";
+}
+
+function calculateResults() {
+
 }

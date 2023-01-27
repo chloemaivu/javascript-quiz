@@ -3,6 +3,11 @@ body {
     background-color: white;
 }
 
+ul {
+    list-style-position: inside;
+    margin-right:50px;
+}
+
 #main {
     display: none;
     width: 750px;
@@ -11,6 +16,18 @@ body {
 #results {
     display: none;
     width: 750px;
+}
+
+#visualLearner {
+    display: none;
+}
+
+#auditoryLearner {
+    display: none;
+}
+
+#kinestheticLearner {
+    display: none;
 }
 
 #quizarea {
