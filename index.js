@@ -143,6 +143,42 @@ const questions = [
             b: "b) talk to the person next to you",
             c: "c) tap your foot or move around in some other way"
         }
+    },
+    // question17
+    {
+        question: "When you contact people, you prefer",
+        answers: {
+            a: "a) face to face meetings",
+            b: "b) calling on the telephone",
+            c: "c) to talk while walking or while participating in an activity"
+        }
+    },
+    // question18
+    {
+        question: "When you talk with others, do you",
+        answers: {
+            a: "a) find it difficult to listen for very long",
+            b: "b) enjoy listening or get impatient to talk",
+            c: "c) gesture and communicate with your hands"
+        }
+    },
+    // question19
+    {
+        question: "When you relax, you would rather",
+        answers: {
+            a: "a) watch TV, go to a movie, play a video game",
+            b: "b) listen to the radio, play music, read, or talk with a friend",
+            c: "c) play sports, work on cars, do arts & crafts, or build something"
+        }
+    },
+    // question20
+    {
+        question: "When you teach other people, do you",
+        answers: {
+            a: "a) show them",
+            b: "b) explain to them and maybe ask questions",
+            c: "c) demonstrate and then ask them to try"
+        }
     }
 ]
 
@@ -168,8 +204,42 @@ const results = [
     }
 ]
 
+let questionCounter = 0;
 
-// show question
-// function showQuestions(currentQuestion) {
-//     document.getElementById("question").innerHTML = questions[currentQuestion].question;
-//   }
+function hideElement(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+function showQuestion(currentQuestion) {
+    document.getElementById("question").innerHTML = questions[currentQuestion].question;
+    document.getElementById("answer1").innerHTML = questions[currentQuestion].answers.a;
+    document.getElementById("answer2").innerHTML = questions[currentQuestion].answers.b;
+    document.getElementById("answer3").innerHTML = questions[currentQuestion].answers.c;
+}
+
+function startQuiz() {
+    // hide introduction
+    hideElement("intro")
+    // show questions and choices
+    document.getElementById("main").style.display = "inline-block";
+    showQuestion(questionCounter);
+}
+
+function nextQuestion() {
+    //change question and corresponding answers
+    questionCounter++;
+    showQuestion(questionCounter);
+    addProgress();
+}
+
+// added functionality to go to previous question
+// function previousQuestion() {
+//     questionCounter--;
+//     showQuestion(questionCounter);
+// }
+
+function addProgress() {
+    var bar = document.querySelector(".progress-bar");
+    bar.style.width = (5 * questionCounter) + "%";
+    bar.innerText = (5 * questionCounter) + "%";
+}
