@@ -22,7 +22,7 @@
             <div id="title">
                 <div class="col">
                     <br/>
-                    <h1 class="text-center p-3 textColour">What is your learning style?</h1>
+                    <h1 class="text-center p-3 textStyle">What is your learning style?</h1>
                     <br />
                 </div>
             </div>
@@ -31,9 +31,9 @@
                 <!--intro content-->
                 <div id="intro" class="justify-content-center mx-auto">
                     <br/>
-                    <h2 class="text-center textColour">Find out your learning style</h2>
+                    <h2 class="text-center textStyle">Find out your learning style</h2>
                     <br /><br />
-                    <p class="text-center textColour">Answer the questions to find out your learning style.</p>
+                    <p class="text-center textStyle">Answer the questions to find out your learning style.</p>
                     <br /><br />
                     <input type="button" value="Start Quiz" class="btn btn-outline-light text-center"
                         onclick="startQuiz()" />
@@ -42,35 +42,36 @@
                 <div id="main" class="mx-auto">
                     <!-- question appears here -->
                     <div class="row justify-content-center">
-                        <h2 class="text-center textColour" id="question"></h2>
+                        <h2 class="text-center textStyle" id="question"></h2>
                     </div>
                     <br />
                     <!-- form for user input -->
                     <form id="quizform" class="justify-content-center">
-                        <div class="form-check">
+                        <div class="form-check p-1">
                             <input class="form-check-input position-absolute" type="radio" name="answers" id="answers1" value="option1">
-                            <label class="form-check-label textColour justify-content-center" for="answers1" id="answer1">
+                            <label class="form-check-label textStyle justify-content-center" for="answers1" id="answer1">
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check p-1">
                             <input class="form-check-input position-absolute" type="radio" name="answers" id="answers2" value="option2">
-                            <label class="form-check-label textColour justify-content-center" for="answers2" id="answer2">
+                            <label class="form-check-label textStyle justify-content-center" for="answers2" id="answer2">
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check p-1">
                             <input class="form-check-input position-absolute" type="radio" name="answers" id="answers3" value="option3">
-                            <label class="form-check-label textColour justify-content-center" for="answers3" id="answer3">
+                            <label class="form-check-label textStyle justify-content-center" for="answers3" id="answer3">
                             </label>
                         </div>
                         <br />
                         <!-- button to go to next question  -->
                         <div class="justify-content-center">
-                            <input type="button" value="Next" class="btn btn-outline-light text-center textColour boxShadow"
+                            <input type="button" value="Next" class="btn btn-outline-light text-center textStyle boxShadow"
                                 onclick="nextQuestion()" />
                         </div>
 
                     </form>
                     <!-- progress bar -->
+                    <br/>
                     <div class="progress m-4 boxShadow" role="progressbar" aria-label="quiz progress"
                         aria-valuemin="0" aria-valuemax="100">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 0%"></div>
