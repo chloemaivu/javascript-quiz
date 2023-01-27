@@ -210,6 +210,10 @@ function hideElement(id) {
     document.getElementById(id).style.display = "none";
 }
 
+function showElement(id) {
+    document.getElementById(id).style.display = "inline-block";
+}
+
 function showQuestion(currentQuestion) {
     document.getElementById("question").innerHTML = questions[currentQuestion].question;
     document.getElementById("answer1").innerHTML = questions[currentQuestion].answers.a;
@@ -221,25 +225,24 @@ function startQuiz() {
     // hide introduction
     hideElement("intro")
     // show questions and choices
-    document.getElementById("main").style.display = "inline-block";
+    showElement("main");
     showQuestion(questionCounter);
 }
 
 function nextQuestion() {
     //change question and corresponding answers
     questionCounter++;
-    showQuestion(questionCounter);
+    if (questionCounter < 20) {
+        showQuestion(questionCounter);
+    } else {
+        hideElement("main")
+        showElement("results");
+    }
     addProgress();
-}
 
-// added functionality to go to previous question
-// function previousQuestion() {
-//     questionCounter--;
-//     showQuestion(questionCounter);
-// }
+}
 
 function addProgress() {
     var bar = document.querySelector(".progress-bar");
     bar.style.width = (5 * questionCounter) + "%";
-    bar.innerText = (5 * questionCounter) + "%";
 }

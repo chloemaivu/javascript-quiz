@@ -4,9 +4,14 @@ body {
 }
 
 #main {
-    display:none;
-    width:750px;
-  }
+    display: none;
+    width: 750px;
+}
+
+#results {
+    display: none;
+    width: 750px;
+}
 
 #quizarea {
     position: absolute;
@@ -15,25 +20,25 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    height: 530px;
+    height: 520px;
     width: 850px;
     background-color: rgb(141, 185, 204);
     border-radius: 3px;
 }
 
 .btn-outline-light {
-    --bs-btn-hover-color: rgb(255,193,7) !important;
-    --bs-btn-active-color:rgb(255,193,7) !important;
+    --bs-btn-hover-color: rgb(255, 193, 7) !important;
+    --bs-btn-active-color: rgb(255, 193, 7) !important;
 }
 
 .textStyle {
     color: aliceblue;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.form-check-input:checked{
-    background-color: rgb(255,193,7)  !important;
-    border-color: rgb(255,193,7)  !important;
+.form-check-input:checked {
+    background-color: rgb(255, 193, 7) !important;
+    border-color: rgb(255, 193, 7) !important;
 }
 
 .boxShadow {
