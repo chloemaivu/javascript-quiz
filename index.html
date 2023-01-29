@@ -48,22 +48,25 @@
                     <!-- form for user input -->
                     <form id="quizform" class="justify-content-center">
                         <div class="form-check p-1">
+                            <!-- radio button for option A -->
                             <input class="form-check-input position-absolute" type="radio" name="answers" id="answers1"
-                                value="option1">
+                                value="a">
                             <label class="form-check-label textStyle justify-content-center" for="answers1"
                                 id="answer1">
                             </label>
                         </div>
                         <div class="form-check p-1">
+                            <!-- radio button for option B -->
                             <input class="form-check-input position-absolute" type="radio" name="answers" id="answers2"
-                                value="option2">
+                                value="b">
                             <label class="form-check-label textStyle justify-content-center" for="answers2"
                                 id="answer2">
                             </label>
                         </div>
                         <div class="form-check p-1">
+                            <!-- radio button for option C -->
                             <input class="form-check-input position-absolute" type="radio" name="answers" id="answers3"
-                                value="option3">
+                                value="c">
                             <label class="form-check-label textStyle justify-content-center" for="answers3"
                                 id="answer3">
                             </label>
@@ -76,6 +79,10 @@
                                 onclick="nextQuestion()" />
                         </div>
 
+
+                        <!-- take out after -->
+                        <div id="checker"></div>
+
                         <!-- progress bar -->
                         <div id="progressBar" class="progress m-5 boxShadow" role="progressbar"
                             aria-label="quiz progress" aria-valuemin="0" aria-valuemax="100">
@@ -87,8 +94,10 @@
                     </form>
                 </div>
 
-                <div id="results" class="justify-content-center mx-auto">
-                    <h2 class="text-center textStyle">You scored mostly. Your learning style is:</h2>
+                <div id="resultsarea" class="justify-content-center mx-auto">
+                    <h2 class="text-center textStyle" id="resultStatement">You scored mostly. Your learning style is:</h2>
+                    <!-- take out after -->
+                    <div id="check2"></div>
 
                     <div id="visualLearner">
                         <ul>
