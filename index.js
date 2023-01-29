@@ -47,11 +47,11 @@ const questions = [
     },
     // question6
     {
-        question: "You have just entered a science museum, what will you do first?",
+        question: "When you talk with others, do you",
         answers: {
-            a: "a) look around and find a map showing the locations of the various exhibits",
-            b: "b) talk to a museum guide and ask about exhibits",
-            c: "c) go into the first exhibit that looks interesting, and read directions later"
+            a: "a) find it difficult to listen for very long",
+            b: "b) enjoy listening or get impatient to talk",
+            c: "c) gesture and communicate with your hands"
         }
     },
     // question7
@@ -74,33 +74,6 @@ const questions = [
     },
     // question9
     {
-        question: "Which are you most likely to do when you are happy?",
-        answers: {
-            a: "a) grin",
-            b: "b) shout with joy",
-            c: "c) jump for joy"
-        }
-    },
-    // question10
-    {
-        question: "If you were at a party, what would you be most likely to remember the next day?",
-        answers: {
-            a: "a) the faces of the people there, but not the names",
-            b: "b) the names but not the faces",
-            c: "c) the things you did and said while you were there"
-        }
-    },
-    // question11
-    {
-        question: "When you see the word \"d - o - g\", what do you do first?",
-        answers: {
-            a: "a) think of a picture of a particular dog",
-            b: "b) say the word \"dog\" to yourself silently",
-            c: "c) sense the feeling of being with a dog (petting it, running with it, etc.)"
-        }
-    },
-    // question12
-    {
         question: "When you tell a story, would you rather",
         answers: {
             a: "a) write it",
@@ -108,61 +81,16 @@ const questions = [
             c: "c) act it out"
         }
     },
-    // question13
+    // question10
     {
-        question: "What is most distracting for you when you are trying to concentrate?",
+        question: "When you teach other people, do you",
         answers: {
-            a: "a) visual distractions",
-            b: "b) noises",
-            c: "c) other sensations like, hunger, tight shoes, or worry"
+            a: "a) show them",
+            b: "b) explain to them and maybe ask questions",
+            c: "c) demonstrate and then ask them to try"
         }
     },
-    // question14
-    {
-        question: "What are you most likely to do when you are angry?",
-        answers: {
-            a: "a) scowl",
-            b: "b) shout or \"blow up\"",
-            c: "c) stomp off and slam doors"
-        }
-    },
-    // question15
-    {
-        question: "When you aren't sure how to spell a word, which of these are you most likely to do?",
-        answers: {
-            a: "a) write it out to see if it looks right",
-            b: "b) sound it out ",
-            c: "c) write it out to see if it feels right"
-        }
-    },
-    // question16
-    {
-        question: "Which are you most likely to do when standing in a long line at the movies?",
-        answers: {
-            a: "a) look at posters advertising other movies",
-            b: "b) talk to the person next to you",
-            c: "c) tap your foot or move around in some other way"
-        }
-    },
-    // question17
-    {
-        question: "When you contact people, you prefer",
-        answers: {
-            a: "a) face to face meetings",
-            b: "b) calling on the telephone",
-            c: "c) to talk while walking or while participating in an activity"
-        }
-    },
-    // question18
-    {
-        question: "When you talk with others, do you",
-        answers: {
-            a: "a) find it difficult to listen for very long",
-            b: "b) enjoy listening or get impatient to talk",
-            c: "c) gesture and communicate with your hands"
-        }
-    },
-    // question19
+    // question11
     {
         question: "When you relax, you would rather",
         answers: {
@@ -171,13 +99,85 @@ const questions = [
             c: "c) play sports, work on cars, do arts & crafts, or build something"
         }
     },
+    // question12
+    {
+        question: "When you contact people, you prefer",
+        answers: {
+            a: "a) face to face meetings",
+            b: "b) calling on the telephone",
+            c: "c) to talk while walking or while participating in an activity"
+        }
+    },
+    // question13
+    {
+        question: "What are you most likely to do when you are angry?",
+        answers: {
+            a: "a) scowl",
+            b: "b) shout or \"blow up\"",
+            c: "c) stomp off and slam doors"
+        }
+    },
+    // question14
+    {
+        question: "Which are you most likely to do when you are happy?",
+        answers: {
+            a: "a) grin",
+            b: "b) shout with joy",
+            c: "c) jump for joy"
+        }
+    },
+    // question15
+    {
+        question: "If you were at a party, what would you be most likely to remember the next day?",
+        answers: {
+            a: "a) the faces of the people there, but not the names",
+            b: "b) the names but not the faces",
+            c: "c) the things you did and said while you were there"
+        }
+    },
+    // question16
+    {
+        question: "When you see the word \"d - o - g\", what do you do first?",
+        answers: {
+            a: "a) think of a picture of a particular dog",
+            b: "b) say the word \"dog\" to yourself silently",
+            c: "c) sense the feeling of being with a dog (petting it, running with it, etc.)"
+        }
+    },
+    // question17
+    {
+        question: "What is most distracting for you when you are trying to concentrate?",
+        answers: {
+            a: "a) visual distractions",
+            b: "b) noises",
+            c: "c) other sensations like, hunger, tight shoes, or worry"
+        }
+    },
+    // question18
+    {
+        question: "When you aren't sure how to spell a word, which of these are you most likely to do?",
+        answers: {
+            a: "a) write it out to see if it looks right",
+            b: "b) sound it out ",
+            c: "c) write it out to see if it feels right"
+        }
+    },
+    // question19
+    {
+        question: "Which are you most likely to do when standing in a long line at the movies?",
+        answers: {
+            a: "a) look at posters advertising other movies",
+            b: "b) talk to the person next to you",
+            c: "c) tap your foot or move around in some other way"
+        }
+    },
     // question20
     {
-        question: "When you teach other people, do you",
+        question: "You have just entered a science museum, what will you do first?",
         answers: {
-            a: "a) show them",
-            b: "b) explain to them and maybe ask questions",
-            c: "c) demonstrate and then ask them to try"
+            a: "a) look around and find a map showing the locations of the various exhibits",
+            b: "b) talk to a museum guide and ask about exhibits",
+            c: "c) go into the first exhibit that looks interesting, and read directions later"
         }
     }
 ]
@@ -209,7 +209,6 @@ const results = [
 
 let questionCounter = 0;
 let countResults = [0, 0, 0];
-
 
 function hideElement(id) {
     document.getElementById(id).style.display = "none";
@@ -260,6 +259,8 @@ function updateResults() {
     for (i = 0; i < type.length; i++) {
         if (type[i].checked) {
             countResults[i]++;
+            // uncheck the button
+            type[i].checked = false;
         }
     }
     // document.getElementById("checker").innerHTML = countResults;
