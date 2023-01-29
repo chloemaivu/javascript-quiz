@@ -188,19 +188,22 @@ const results = [
     {
         letter: "a",
         learningStyle: "visual",
-        styleInfo: "You learn by seeing and looking."
+        styleInfo: "You learn by seeing and looking.",
+        extraInfo: "visualLearner"
     },
     // auditory learner
     {
         letter: "b",
         learningStyle: "auditory",
-        styleInfo: "You learn by hearing and listening."
+        styleInfo: "You learn by hearing and listening.",
+        extraInfo: "auditoryLearner"
     },
     // kinesthetic learner
     {
         letter: "c",
         learningStyle: "kinesthetic",
-        styleInfo: "You learn by touching and doing."
+        styleInfo: "You learn by touching and doing.",
+        extraInfo: "kinestheticLearner"
     }
 ]
 
@@ -240,8 +243,7 @@ function nextQuestion() {
         showQuestion(questionCounter);
     } else {
         hideElement("main");
-        calculateResults();
-        showElement("resultsarea");
+        displayResults();
     }
 }
 
@@ -260,10 +262,10 @@ function updateResults() {
             countResults[i]++;
         }
     }
-    document.getElementById("checker").innerHTML = countResults;
+    // document.getElementById("checker").innerHTML = countResults;
 }
 
-function calculateResults() {
+function displayResults() {
     let max = 0;
     let i = 0;
     countResults.forEach((count, index) => {
@@ -272,5 +274,8 @@ function calculateResults() {
             i = index;
         }
     })
-    document.getElementById("resultStatement").innerHTML = "You scored mostly " + results[i].letter + "'s. Your learning style is " + results[i].learningStyle + ". " + results[i].styleInfo;
+    document.getElementById("resultStatement").innerHTML = "You scored mostly " + results[i].letter + 
+    "'s. Your learning style is " + results[i].learningStyle + ". " + results[i].styleInfo;
+    showElement(results[i].extraInfo);
+    showElement("resultsarea");
 }
