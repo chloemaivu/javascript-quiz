@@ -40,10 +40,20 @@
                 </div>
 
                 <div id="main" class="mx-auto">
+                    <!-- progress bar -->
+                    <div id="progressBar" class="progress boxShadow" role="progressbar" aria-label="quiz progress"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                            style="width: 0%">
+                        </div>
+                    </div>
+                    <br /><br />
+
                     <!-- question appears here -->
                     <div class="row justify-content-center">
                         <h2 class="text-center textStyle" id="question"></h2>
                     </div>
+
                     <br />
                     <!-- form for user input -->
                     <form id="quizform" class="justify-content-center">
@@ -79,83 +89,77 @@
                                 onclick="nextQuestion()" />
                         </div>
 
-
-                        <!-- take out after -->
-                        <div id="checker"></div>
-
-                        <!-- progress bar -->
-                        <div id="progressBar" class="progress m-5 boxShadow" role="progressbar"
-                            aria-label="quiz progress" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                style="width: 0%">
-                            </div>
-                        </div>
+                        <!-- use to check score works properly -->
+                        <!-- <div id="checker"></div> -->
 
                     </form>
                 </div>
 
                 <div id="resultsarea" class="justify-content-center mx-auto">
-                    <h2 class="text-center textStyle" id="resultStatement">You scored mostly. Your learning style is:</h2>
-                    <!-- take out after -->
-                    <div id="check2"></div>
-
-                    <div id="visualLearner">
-                        <ul>
-                            <li class="textStyle">take numerous detailed notes</li>
-                            <li class="textStyle">tend to sit in the front </li>
-                            <li class="textStyle">are usually neat and clean </li>
-                            <li class="textStyle">often close their eyes to visualize or remember something </li>
-                            <li class="textStyle">find something to watch if they are bored </li>
-                            <li class="textStyle">like to see what they are learning </li>
-                            <li class="textStyle">benefit from illustrations and presentations that use color </li>
-                            <li class="textStyle">are attracted to written or spoken language rich in imagery </li>
-                            <li class="textStyle">prefer stimuli to be isolated from auditory and kinesthetic
-                                distraction </li>
-                            <li class="textStyle">find passive surroundings ideal</li>
-                        </ul>
-                    </div>
-
-                    <div id="auditoryLearner">
-                        <ul>
-                            <li class="textStyle">sit where they can hear but needn't pay attention to what is happening
-                                in front</li>
-                            <li class="textStyle">may not coordinate colors or clothes, but can explain why they are
-                                wearing what they are wearing and why</li>
-                            <li class="textStyle">hum or talk to themselves or others when bored</li>
-                            <li class="textStyle">acquire knowledge by reading aloud</li>
-                            <li class="textStyle">remember by verbalizing lessons to themselves (if they don't they have
-                                difficulty reading maps or diagrams or handling conceptual assignments like
-                                mathematics)</li>
-                        </ul>
-                    </div>
-
-                    <div id="kinestheticLearner">
-                        <ul>
-                            <li class="textStyle">need to be active and take frequent breaks</li>
-                            <li class="textStyle">speak with their hands and with gestures</li>
-                            <li class="textStyle">remember what was done, but have difficulty recalling what was said or
-                                seen</li>
-                            <li class="textStyle">find reasons to tinker or move when bored</li>
-                            <li class="textStyle">rely on what they can directly experience or perform activities such
-                                as cooking, construction, engineering and art help them perceive and learn</li>
-                            <li class="textStyle">enjoy field trips and tasks that involve manipulating materials</li>
-                            <li class="textStyle">sit near the door or someplace else where they can easily get up and
-                                move around</li>
-                            <li class="textStyle">are uncomfortable in classrooms where they lack opportunities for
-                                hands-on experience</li>
-                            <li class="textStyle">communicate by touching and appreciate physically expressed
-                                encouragement, such as a pat on the back</li>
-                        </ul>
-                    </div>
-
 
                     <!-- progress bar -->
-                    <div id="progressBar" class="progress m-5 boxShadow" role="progressbar" aria-label="quiz progress"
+                    <div id="progressBar" class="progress boxShadow" role="progressbar" aria-label="quiz progress"
                         aria-valuemin="0" aria-valuemax="100">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
                             style="width: 100%">
                         </div>
                     </div>
+                    <br />
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <h2 class="text-center textStyle" id="resultStatement"></h2>
+                                </button>
+                            </h2>
+
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div id="visualLearner">
+                                        <ul>
+                                            <li class="textStyle">take numerous detailed notes</li>
+                                            <li class="textStyle">tend to sit in the front </li>
+                                            <li class="textStyle">are usually neat and clean </li>
+                                            <li class="textStyle">find something to watch if they are bored </li>
+                                            <li class="textStyle">like to see what they are learning </li>
+                                            <li class="textStyle">find passive surroundings ideal</li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="auditoryLearner">
+                                        <ul>
+                                            <li class="textStyle">sit where they can hear but needn't pay attention to
+                                                what is happening in front</li>
+                                            <li class="textStyle">may not coordinate colors or clothes, but can explain
+                                                why they are wearing what they are wearing and why</li>
+                                            <li class="textStyle">hum or talk to themselves or others when bored</li>
+                                            <li class="textStyle">acquire knowledge by reading aloud</li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="kinestheticLearner">
+                                        <ul>
+                                            <li class="textStyle">need to be active and take frequent breaks</li>
+                                            <li class="textStyle">speak with their hands and with gestures</li>
+                                            <li class="textStyle">remember what was done, but have difficulty recalling
+                                                what was said or seen</li>
+                                            <li class="textStyle">find reasons to tinker or move when bored</li>
+                                            <li class="textStyle">enjoy field trips and tasks that involve manipulating
+                                                materials</li>
+                                            <li class="textStyle">sit near the door or someplace else where they can
+                                                easily get up and move around</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

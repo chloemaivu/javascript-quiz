@@ -61,3 +61,19 @@ ul {
 .boxShadow {
     box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(255, 193, 7, 0.9) 0px 0px 0px 1px;
 }
+
+.accordion {
+    --bs-body-bg: rgb(141, 185, 204) !important;
+    /* --bs-primary-text: white !important; */
+    /* --bs-body-color:  white !important; */
+}
+
+.accordion-button:not(.collapsed) {
+    /* --bs-accordion-active-color: rgb(141, 185, 204) !important ; */
+    
+    --bs-accordion-active-bg: rgb(141, 185, 204) !important ;
+    /* --bs-accordion-active-color: white !important; */
+}
+/* accordion-button:focus {
+    --bs-accordion-btn-focus-border-color: rgb(255, 193, 7) !important;
+} */
