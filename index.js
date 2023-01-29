@@ -205,6 +205,8 @@ const results = [
 ]
 
 let questionCounter = 0;
+let countResults = [0, 0, 0];
+
 
 function hideElement(id) {
     document.getElementById(id).style.display = "none";
@@ -233,11 +235,13 @@ function nextQuestion() {
     //change question and corresponding answers
     questionCounter++;
     addProgress();
+    updateResults();
     if (questionCounter < 20) {
         showQuestion(questionCounter);
     } else {
         hideElement("main");
-        showElement("results");
+        calculateResults();
+        showElement("resultsarea");
     }
 }
 
@@ -246,6 +250,27 @@ function addProgress() {
     bar.style.width = (5 * questionCounter) + "%";
 }
 
-function calculateResults() {
+function updateResults() {
+    // if the a radio button is checked then increment countResults[0] by 1
+    // if the b radio button is checked then increment countResults[1] by 1
+    // if the c radio button is checked then increment countResults[2] by 1
+    let type = document.getElementsByName('answers');
+    for (i = 0; i < type.length; i++) {
+        if (type[i].checked) {
+            countResults[i]++;
+        }
+    }
+    document.getElementById("checker").innerHTML = countResults;
+}
 
+function calculateResults() {
+    let max = 0;
+    let i = 0;
+    countResults.forEach((count, index) => {
+        if (count > max) {
+            max = count;
+            i = index;
+        }
+    })
+    document.getElementById("resultStatement").innerHTML = "You scored mostly " + results[i].letter + "'s. Your learning style is " + results[i].learningStyle + ". " + results[i].styleInfo;
 }
