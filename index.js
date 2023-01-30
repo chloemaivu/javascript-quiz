@@ -234,16 +234,30 @@ function startQuiz() {
 }
 
 function nextQuestion() {
-    //change question and corresponding answers
-    questionCounter++;
-    addProgress();
-    updateResults();
-    if (questionCounter < 20) {
-        showQuestion(questionCounter);
-    } else {
-        hideElement("main");
-        displayResults();
+    if (checkAnswered()) {
+        //change question and corresponding answers
+        questionCounter++;
+        addProgress();
+        updateResults();
+        if (questionCounter < 20) {
+            showQuestion(questionCounter);
+        } else {
+            hideElement("main");
+            displayResults();
+        }
     }
+}
+
+function checkAnswered() {
+    //check there is a radio button ticked, else do not change question
+    let type = document.getElementsByName('answers');
+    for (i = 0; i < type.length; i++) {
+        if (type[i].checked) {
+            return true;
+        }
+    }
+    // prompt user to answer question
+    return false;
 }
 
 function addProgress() {
@@ -275,8 +289,8 @@ function displayResults() {
             i = index;
         }
     })
-    document.getElementById("resultStatement").innerHTML = "You scored mostly " + results[i].letter + 
-    "'s. Your learning style is " + results[i].learningStyle + ". " + results[i].styleInfo;
+    document.getElementById("resultStatement").innerHTML = "You scored mostly " + results[i].letter +
+        "'s. Your learning style is " + results[i].learningStyle + ". " + results[i].styleInfo;
     showElement(results[i].extraInfo);
     showElement("resultsarea");
 }
