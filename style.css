@@ -30,6 +30,10 @@ ul {
     display: none;
 }
 
+#alertUser {
+    display: none;
+}
+
 #quizarea {
     position: absolute;
     margin: auto;
@@ -64,16 +68,13 @@ ul {
 
 .accordion {
     --bs-body-bg: rgb(141, 185, 204) !important;
-    /* --bs-primary-text: white !important; */
-    /* --bs-body-color:  white !important; */
 }
 
 .accordion-button:not(.collapsed) {
-    /* --bs-accordion-active-color: rgb(141, 185, 204) !important ; */
-    
     --bs-accordion-active-bg: rgb(141, 185, 204) !important ;
-    /* --bs-accordion-active-color: white !important; */
 }
-/* accordion-button:focus {
-    --bs-accordion-btn-focus-border-color: rgb(255, 193, 7) !important;
-} */
+
+.alert-warning {
+    --bs-warning-text: rgb(255, 193, 7) !important;
+    --bs-warning-bg-subtle: white !important;
+}
