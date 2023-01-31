@@ -214,6 +214,10 @@ function hideElement(id) {
     document.getElementById(id).style.display = "none";
 }
 
+function hideAlert() {
+    document.getElementById("alertUser").style.display = "none";
+}
+
 function showElement(id) {
     document.getElementById(id).style.display = "inline-block";
 }
@@ -253,10 +257,12 @@ function checkAnswered() {
     let type = document.getElementsByName('answers');
     for (i = 0; i < type.length; i++) {
         if (type[i].checked) {
+            hideAlert();
             return true;
         }
     }
     // prompt user to answer question
+    showElement("alertUser");
     return false;
 }
 
